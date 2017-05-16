@@ -3,6 +3,12 @@ date: 2016-11-15 11:34:29
 tags:
 ---
 
+//  WeAppArchitectureDescription.ReadMe
+//  MicroMessenger
+//
+//  Created by tedwu on 2016-7-15.
+//  Copyright 2016 Tencent. All rights reserved.
+
 <!-- more -->
 
 ```
