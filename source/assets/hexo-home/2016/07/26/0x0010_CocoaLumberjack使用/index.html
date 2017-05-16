@@ -1,0 +1,351 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="author" content="Henray Luo">
+  
+  
+  
+  
+    <meta name="description" content="安装12pod 'CocoaLumberjack'Xcode Install XcodeColors
+导入头文件12#import &lt;CocoaLumberjack/CocoaLumberjack.h&gt;static const DDLogLevel ddLogLevel = DDLogLevelAll;
+初始化及使用12345678910111213141516171819202...">
+  
+  <title>CocoaLumberjack使用 [ Henray's Blog ]</title>
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+  <link rel="stylesheet" href="/css/random.css" type="text/css">
+<link rel="stylesheet" href="/css/vegas.min.css" type="text/css">
+<link rel="stylesheet" href="/css/highlight-railscasts.css" type="text/css">
+<link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css">
+<link rel="stylesheet" href="/css/iconfont/iconfont.css" type="text/css">
+<link rel="stylesheet" href="/css/jquery.fancybox-thumbs.css" type="text/css">
+<link rel="stylesheet" href="/css/plyr.css" type="text/css">
+  
+</head>
+
+<body>
+<div class="side-navigate hide-area">
+  
+    <div class="item prev">
+      <a href="/2016/08/01/0x0011_论代码命名的重要性/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        论代码命名的重要性
+      </div>
+    </div>
+  
+  
+    <div class="item next">
+      <a href="/2016/07/19/0x0009_iOS本地数据存储库比较/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        iOS本地数据存储库比较
+      </div>
+    </div>
+  
+</div>
+<div id="outer-container" class="hide-area">
+<div id="container">
+  <div id="menu-outer" class="slide-down">
+    <div id="menu-inner">
+      <div id="brand">
+        
+        <a onClick="openUserCard()">
+          <img id="avatar" src="http://7te9fe.com1.z0.glb.clouddn.com/default_avatar.jpg"/>
+          <div id="homelink">Henray's Blog</div>
+        </a>
+      </div>
+      <div id="menu-list">
+        <ul>
+        
+        
+          
+            <li>
+          
+            <a href="/index.html">Home</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/archives">Archives</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/tags">Tags</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/categories">Categories</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/about">About</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="https://github.com/stiekel/hexo-theme-random">Github</a>
+            
+          </li>
+        
+        </ul>
+      </div>
+      <div id="show-menu">
+        <button>Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="content-outer">
+    <div id="content-inner">
+      
+      
+  <article id="post">
+    <h1>CocoaLumberjack使用</h1>
+    <p class="page-title-sub">
+      <span id = "post-title-date">撰写于 2016-07-26</span>
+      
+        <span id = "post-title-updated">修改于 2016-08-06</span>
+      
+      
+      
+    </p>
+    
+    <h4 id="安装">安装</h4><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="string">'CocoaLumberjack'</span></span><br><span class="line">Xcode <span class="keyword">Install</span> XcodeColors</span><br></pre></td></tr></table></figure>
+<h4 id="导入头文件">导入头文件</h4><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">&lt;CocoaLumberjack/CocoaLumberjack.h&gt;</span></span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">const</span> DDLogLevel ddLogLevel = DDLogLevelAll;</span><br></pre></td></tr></table></figure>
+<h4 id="初始化及使用">初始化及使用</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">- (BOOL)<span class="string">application:</span>(UIApplication *)application <span class="string">didFinishLaunchingWithOptions:</span>(NSDictionary *)launchOptions &#123;</span><br><span class="line">    <span class="comment">// Override point for customization after application launch.</span></span><br><span class="line">    setenv(<span class="string">"XcodeColors"</span>, <span class="string">"YES"</span>, <span class="number">0</span>);                        <span class="comment">// 启用颜色区分</span></span><br><span class="line">    </span><br><span class="line">    [DDLog <span class="string">addLogger:</span>[DDTTYLogger sharedInstance]];         <span class="comment">// TTY = Xcode console</span></span><br><span class="line">    [DDLog <span class="string">addLogger:</span>[DDASLLogger sharedInstance]];         <span class="comment">// ASL = Apple System Logs</span></span><br><span class="line">    [[DDTTYLogger sharedInstance] <span class="string">setColorsEnabled:</span>YES];    <span class="comment">// 启用颜色区分</span></span><br><span class="line">    </span><br><span class="line">    DDFileLogger *fileLogger = [[DDFileLogger alloc] init]; <span class="comment">// File Logger</span></span><br><span class="line">    fileLogger.rollingFrequency = <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span>;             <span class="comment">// 24 hour rolling</span></span><br><span class="line">    fileLogger.logFileManager.maximumNumberOfLogFiles = <span class="number">7</span>;</span><br><span class="line">    [DDLog <span class="string">addLogger:</span>fileLogger];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Test</span></span><br><span class="line">    DDLogVerbose(@<span class="string">"Verbose"</span>);</span><br><span class="line">    DDLogDebug(@<span class="string">"Debug"</span>);</span><br><span class="line">    DDLogInfo(@<span class="string">"Info"</span>);</span><br><span class="line">    DDLogWarn(@<span class="string">"Warn"</span>);</span><br><span class="line">    DDLogError(@<span class="string">"Error"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> YES;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+  </article>
+  <div class="random-toc-area">
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">显示目录</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">隐藏目录</button>
+  <div class="random-toc">
+    <h2>目录</h2>
+    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#导入头文件"><span class="toc-text">导入头文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#初始化及使用"><span class="toc-text">初始化及使用</span></a></li></ol>
+  </div>
+</div>
+
+  
+<nav id="pagination">
+  
+    <a href="/2016/08/01/0x0011_论代码命名的重要性/" class="prev">&larr; 上一篇 论代码命名的重要性</a>
+  
+
+  
+
+  
+    <a href="/2016/07/19/0x0009_iOS本地数据存储库比较/" class="next">下一篇 iOS本地数据存储库比较 &rarr;</a>
+  
+</nav>
+
+  <!-- JiaThis Button BEGIN -->
+
+<!-- JiaThis Button END -->
+
+
+      
+      <div class="ds-thread" data-thread-key="2016/07/26/0x0010_CocoaLumberjack使用/" data-title="CocoaLumberjack使用" data-url="http://Henray-Luo.github.io/2016/07/26/0x0010_CocoaLumberjack使用/"></div>
+      
+      
+      
+    </div>
+  </div>
+
+  <div id="bottom-outer">
+    <div id="bottom-inner">
+      Site by Henray Luo using
+      <a href="http://hexo.io">Hexo</a> & <a href="https://github.com/stiekel/hexo-theme-random">Random</a>
+      <br>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  <script type="text/javascript">
+var duoshuoQuery = {short_name:"henray"};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+   || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+
+
+
+<div id="user-card">
+  <div class="center-field">
+    <img class="avatar" src="http://7te9fe.com1.z0.glb.clouddn.com/default_avatar.jpg">
+    <p id="description">做飞蛾吧，去扑火！</p>
+    <ul class="social-icon">
+  
+  
+    <li>
+      <a href="https://github.com/Henray-Luo">
+        
+          <i class="icon iconfont github">&#xe606;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://twitter.com/g55pxZF5igQLCLc">
+        
+          <i class="icon iconfont twitter">&#xe600;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://weibo.com/2784263224/profile?is_all=1">
+        
+          <i class="icon iconfont weibo">&#xe602;</i>
+        
+      </a>
+    </li>
+  
+</ul>
+  </div>
+</div>
+
+
+<div id="btn-view">Hide</div>
+
+<script>
+// is trigger analytics / tongji script
+var isIgnoreHost = false;
+
+if(window && window.location && window.location.host) {
+  isIgnoreHost = ["localhost","127.0.0.1"].some(function(address){
+    return 0 === window.location.host.indexOf(address);
+  });
+}
+
+var isTriggerAnalytics = !( true && isIgnoreHost );
+
+</script>
+
+
+
+
+  
+  
+    <script src="/js/jquery-2.2.3.min.js"></script>
+  
+    <script src="/js/vegas.min.js"></script>
+  
+    <script src="/js/random.js"></script>
+  
+    <script src="/js/highlight.pack.js"></script>
+  
+    <script src="/js/jquery.mousewheel.pack.js"></script>
+  
+    <script src="/js/jquery.fancybox.pack.js"></script>
+  
+    <script src="/js/jquery.fancybox-thumbs.js"></script>
+  
+    <script src="/js/plyr.js"></script>
+  
+
+<script>
+
+  // fancybox
+  var backgroundImages = [];
+  
+  $('#post').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
+      var alt = this.alt || this.title;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'post' + i);
+    });
+  });
+  $(".fancybox").fancybox();
+
+var vegasConfig = {"preload­Image":true,"transition":["slideLeft2","slideRight2","flash2"],"timer":true,"delay":5000,"shuffle":true,"count":28};
+var unsplashConfig = {"gravity":"north"};
+// is show background images
+var turnoffBackgroundImage = false;
+
+
+
+  turnoffBackgroundImage = true;
+
+
+var backgroundColor = "D7CCC8";
+
+$(".fancybox-thumb").fancybox({
+  prevEffect: 'none',
+  nextEffect: 'none',
+  helpers: {
+    title: {
+      type: 'outside'
+    },
+    thumbs: {
+      width: 50,
+      height: 50
+    }
+  }
+});
+
+// show video with plyr
+$(".video-container iframe").each(function(i){
+  var url = $(this).attr('src');
+  var id = url.split('/').pop();
+  var plyrContainer = document.createElement('div');
+  plyrContainer.className = 'plyr';
+  var plyrElement = document.createElement('div');
+  plyrElement.dataset.videoId = id;
+  switch(true) {
+    case url.search('youtube.com') >= 0:
+      plyrElement.dataset.type = 'youtube';
+      break;
+    case url.search('vimeo.com') >= 0:
+      plyrElement.dataset.type = 'vimeo';
+      break;
+    default:
+      return;
+  };
+  plyrContainer.appendChild(plyrElement);
+  $(this).parent().html(plyrContainer);
+});
+plyr.setup('.plyr', {iconUrl: '/css/sprite.svg'});
+</script>
+</body>
+</html>
+
