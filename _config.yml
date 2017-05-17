@@ -75,7 +75,7 @@ generatorRecent:
     - date
     - tags
 
-duoshuo_shortname: henray
+#duoshuo_shortname: henray
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html

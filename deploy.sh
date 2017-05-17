@@ -17,10 +17,13 @@ elif [ "t" = $1 ]; then
 
 elif [ "d" = $1 ]; then
 
-    #hexo deplog
+#    hexo clean
+#    hexo g
+#    hexo d
     hexo clean
-    hexo g
-    hexo d
+
+elif [ "c" = $1 ]; then
+
     hexo clean
 
 else
