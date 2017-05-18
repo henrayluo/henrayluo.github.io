@@ -135,10 +135,10 @@ font:
 social:
   GitHub: https://github.com/henrayluo
   Email: mailto:HenrayLuo@gmail.com
-  FaceBook: https://www.facebook.com/profile.php?id=100007137240166
-  Twitter: https://twitter.com/OXOOFF
   Weibo: http://weibo.com/2784263224/profile?is_all=1
   Instagram: https://www.instagram.com/henrayluo/
+  FaceBook: https://www.facebook.com/profile.php?id=100007137240166
+  Twitter: https://twitter.com/OXOOFF
   Tumblr: http://henray-luo.tumblr.com
   NetEaseM: http://music.163.com/#/user/home?id=6244670
   #LinkLabel: Link
@@ -153,9 +153,14 @@ social_icons:
   enable: true
   # Icon Mappings.
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
-  GitHub: github
+  GitHub: github-alt
+  Email: envelope
+  FaceBook: facebook
   Twitter: twitter
   Weibo: weibo
+  Instagram: camera
+  Tumblr: book
+  NetEaseM: music
 
 
 # Sidebar Avatar
