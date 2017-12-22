@@ -3,7 +3,7 @@ date: 2017-12-22 13:48:21
 tags: Tweak iOS Crack
 ---
 
-### 讯视频去除播放前120+s广告
+### 腾讯视频去除播放前120+s广告
 
 ```
 #import <Foundation/Foundation.h>
