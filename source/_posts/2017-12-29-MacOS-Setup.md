@@ -1,4 +1,4 @@
-title: My MacOS Setup
+title: MacOS Setup
 date: 2017-12-29 10:48:21
 tags: Mac Software
 ---
