@@ -126,17 +126,21 @@ scheme: Pisces
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
+social:
+  GitHub: https://github.com/henrayluo || github
+  E-Mail: mailto:HenrayLuo@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
-  #Twitter: https://twitter.com/yourname || twitter
-  #FB Page: https://www.facebook.com/yourname || facebook
+  Twitter: https://twitter.com/henrayluo || twitter
+  FB Page: https://www.facebook.com/profile.php?id=100007137240166 || facebook
   #VK Group: https://vk.com/yourname || vk
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
   #YouTube: https://youtube.com/yourname || youtube
-  #Instagram: https://instagram.com/yourname || instagram
+  Instagram: https://www.instagram.com/henrayluo/ || instagram
   #Skype: skype:yourname?call|chat || skype
+
+  Weibo: http://weibo.com/2784263224/profile?is_all=1
+  Tumblr: http://henray-luo.tumblr.com
+  NetEaseM: http://music.163.com/#/user/home?id=6244670
 
 social_icons:
   enable: true
