@@ -131,7 +131,7 @@ social:
   E-Mail: mailto:HenrayLuo@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
   Twitter: https://twitter.com/henrayluo || twitter
-  FB Page: https://www.facebook.com/profile.php?id=100007137240166 || facebook
+  #FB Page: https://www.facebook.com/profile.php?id=100007137240166 || facebook
   #VK Group: https://vk.com/yourname || vk
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
   #YouTube: https://youtube.com/yourname || youtube
@@ -139,7 +139,7 @@ social:
   #Skype: skype:yourname?call|chat || skype
 
   Weibo: http://weibo.com/2784263224/profile?is_all=1
-  Tumblr: http://henray-luo.tumblr.com
+  #Tumblr: http://henray-luo.tumblr.com
   NetEaseM: http://music.163.com/#/user/home?id=6244670
 
 social_icons:
