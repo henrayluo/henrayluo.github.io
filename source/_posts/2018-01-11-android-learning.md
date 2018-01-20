@@ -13,8 +13,10 @@ tags: Android
 * [GitHub-RxJava](https://github.com/ReactiveX/RxJava)
 * [GitHub-google/auto](https://github.com/google/auto/tree/master/value)
 * [Json解析库Moshi](https://github.com/square/moshi)
+* [google/gson](https://github.com/google/gson)
 * [Guice-Google轻量级依赖注入框架](https://github.com/google/guice)
 * [Dagger: 极速的Java和Android依赖注入库](https://github.com/square/dagger)
+* [glide图片](https://github.com/bumptech/glide)
 
 
 ### Android Studio
