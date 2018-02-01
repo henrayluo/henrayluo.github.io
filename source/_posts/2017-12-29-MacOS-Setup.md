@@ -32,3 +32,5 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 [Karabiner](https://github.com/tekezo/Karabiner)(KeyRemap4MacBook) is a powerful utility for keyboard customization.
 
 rules: Vi Mode [D as Trigger Key] (recommended).
+
+### [QuickLook Plugins](https://github.com/sindresorhus/quick-look-plugins)
