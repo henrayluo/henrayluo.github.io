@@ -34,3 +34,9 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 rules: Vi Mode [D as Trigger Key] (recommended).
 
 ### [QuickLook Plugins](https://github.com/sindresorhus/quick-look-plugins)
+
+### 百度云加速下载
+
+* [aria2gui](https://github.com/yangshun1029/aria2gui)
+* [Chrome扩展BaiduExporter](https://github.com/acgotaku/BaiduExporter) 不要去release页面下载旧版本，直接在仓库中有较新的版本呢 -_-
+ 
