@@ -33,6 +33,12 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 
 rules: Vi Mode [D as Trigger Key] (recommended).
 
+### Mos
+
+[Mos](https://github.com/Caldis/Mos) 一个用于在 MacOS 上平滑你的鼠标滚动效果或单独设置滚动方向的小工具, 让你的滚轮爽如触控板 | A lightweight tool used to smooth scrolling and set scroll direction independently for your mouse on MacOS.
+
+简单讲，这家伙可以为我的黑苹果省一块 [Magic Trackpad 2(秒控板 2)](https://www.apple.com/cn/shop/product/MRMF2?fnode=4c)。
+
 ### [QuickLook Plugins](https://github.com/sindresorhus/quick-look-plugins)
 
 ### 百度云加速下载
