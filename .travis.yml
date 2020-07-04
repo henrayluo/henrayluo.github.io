@@ -11,6 +11,7 @@ script:
 
 after_script:
   - cd ./public
+  - ls -al
   - git init
   - git config user.name "ray"
   - git config user.email "henrayluo@gmail.com"
